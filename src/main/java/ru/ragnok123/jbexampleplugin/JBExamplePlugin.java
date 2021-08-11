@@ -6,7 +6,7 @@ public class JBExamplePlugin extends JavaPlugin{
 	
 	public void onEnable() {
 		this.getLogger().info("Plugin enabled");
-		this.getServer().getEventManager().registerEventListener(this, new PluginListener(this));
+		this.getServer().getEventManager().registerListener(this, new PluginListener(this));
 	}
 	
 }
