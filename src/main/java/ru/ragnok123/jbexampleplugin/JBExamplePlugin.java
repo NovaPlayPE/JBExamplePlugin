@@ -7,6 +7,7 @@ public class JBExamplePlugin extends JavaPlugin{
 	public void onEnable() {
 		this.getLogger().info("Plugin enabled");
 		this.getServer().getEventManager().registerListener(this, new PluginListener(this));
+		this.getServer().getCommandMap().registerCommand(new ExampleCommand("zerocoords"));
 	}
 	
 }

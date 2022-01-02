@@ -1,6 +1,7 @@
 package ru.ragnok123.jbexampleplugin;
 
 import net.novatech.jbserver.event.*;
+import net.novatech.jbserver.event.player.PlayerJoinEvent;
 import net.novatech.jbserver.event.player.PlayerLoginEvent;
 import net.novatech.jbserver.event.world.WorldLoadEvent;
 import net.novatech.jbserver.player.Player;
@@ -22,6 +23,11 @@ public class PluginListener implements EventListener {
 		
 		player.sendMessage(Color.CYAN + "Welcome on JBServer, " + Color.GREEN + info.getName());
 		plugin.getLogger().info(Color.YELLOW + "Player " + Color.GREEN + info.getName() + Color.YELLOW + " connected");
+	}
+	
+	@EventHandler
+	public void onPlayerJoin(PlayerJoinEvent event) {
+		event.setJoinMessage(Color.colorizeMC(Color.YELLOW + event.getPlayer().getPlayerInfo().getName() + " joined server"));;
 	}
 	
 	@EventHandler
