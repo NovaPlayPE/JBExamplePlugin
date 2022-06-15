@@ -4,7 +4,7 @@ import net.novatech.jbserver.command.Command;
 import net.novatech.jbserver.command.CommandSender;
 import net.novatech.jbserver.player.Player;
 import net.novatech.jbserver.world.Location;
-import net.novatech.library.math.Vector3d;
+import net.novatech.library.math.vector.Vector3d;
 
 public class ExampleCommand extends Command {
 
